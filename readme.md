@@ -7,7 +7,7 @@
 
 ## Lien du site en production
 
-[STUDIO](https://filmfindercarolemny.herokuapp.com/)
+[FILMFINDER]()
 
 ## Détail des fonctionnalités
 
