@@ -49,7 +49,7 @@ const displayMovie = (data) => {
 
 // to open readMore
 const readMore = (data) => {
-  fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${data}`)
+  fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${data}`)
     .then((response) => response.json())
     .then((response) => {
       let displayContent = document.getElementById("popup-content");
@@ -81,7 +81,7 @@ const closePopup = () => {
 // fetching
 const fetching = () => {
   let searchInput = document.getElementById("searchInput").value;
-  fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchInput}`)
+  fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchInput}`)
     .then((response) => response.json())
     .then((response) => {
       checkMovie(response);
