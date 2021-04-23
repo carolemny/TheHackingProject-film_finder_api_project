@@ -45,6 +45,26 @@ const displayMovie = (data) => {
       </div>
     </div>
   `;
+
+  let observer = new IntersectionObserver(
+    function (observables) {
+      observables.forEach(function (observable) {
+        if (observable.intersectionRatio > 0.5) {
+          observable.target.classList.remove("not-visible");
+          observer.unobserve(observable.target);
+        }
+      });
+    },
+    {
+      threshold: [0.5],
+    }
+  );
+
+  let items = document.querySelectorAll(".row");
+  items.forEach(function (item) {
+    item.classList.add("not-visible");
+    observer.observe(item);
+  });
 };
 
 // to open readMore
